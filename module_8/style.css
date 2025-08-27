@@ -1,0 +1,119 @@
+body{
+    margin: 0 auto;
+    background-color: #F8F8FF;
+}
+
+.container{
+    padding-top: 20px;
+    display: flex;
+    flex-flow: column;
+    row-gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    margin: 0;
+    align-self: center;
+    justify-self: center;
+    color: #00CED1;
+    font-family: Pacifico, Times, serif;
+}
+
+.loader{
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #333;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    animation: spin 2s linear ease-in-out infinite;
+    margin: 20px auto;
+    display: none;
+    align-self: center;
+    justify-self: center;
+}
+
+.btn{
+    font-family: Mulish, Helvetica, sans-serif;
+    width: fit-content;
+    align-self: center;
+    justify-self: center;
+    height: fit-content;
+    border-radius: 3px;
+    border-width: 1px;
+    border-color: #4682B4;
+    color: #4682B4;
+    background-color: #E0FFFF;
+
+}
+.gallery{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 300px);
+    grid-template-rows: repeat(2, 300px);
+    grid-gap: 10px;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1024px){
+    h1{
+        font-size: 28px;
+}
+    .gallery{
+        padding: 5px;
+        grid-template-columns: repeat(5, 195px);
+        grid-template-rows: repeat(2, 195px);
+        grid-gap: 5px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    h1{
+        font-size: 26px;
+}
+.btn{
+    font-size: 0.8em;
+}
+    .gallery{
+        padding: 5px;
+        grid-template-columns: repeat(5, 148px);
+        grid-template-rows: repeat(2, 148px);
+        grid-gap: 5px;
+    }
+}
+
+@media screen and (max-width: 414px){
+    h1{
+        font-size: 16px;
+}
+.btn{
+    font-size: 0.5em;
+}
+    .gallery{
+        padding: 5px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 5px;
+        row-gap: 5px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    h1{
+        font-size: 12px;
+}
+.btn{
+    font-size: 0.4em;
+}
+    .gallery{
+        padding: 5px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 5px;
+        row-gap: 5px;
+    }
+}
